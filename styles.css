@@ -110,8 +110,8 @@ button:hover {
     border: 2px solid    #f5e448;
 }
 
-.prompt-input-container button {
-    background-color: yellow;
+.prompt-input-container #send-button {
+    background-color: #e0e015;
     color: #1e1c1c;
     border: none;
     border-radius: 5px;
@@ -120,6 +120,41 @@ button:hover {
     width: 10%;
     height: 90%;
     margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        font-weight: 600;
+    }
+}
+.prompt-input-container #send-button:hover{
+    background-color: #ffff00;
+}
+.prompt-input-container #send-button:active {
+    background-color: #ffff00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.loader {
+    margin: auto;
+    border: 8px solid #5e5b5b;
+    border-radius: 50%;
+    border-top: 10px solid #000000;
+    width: 20px;
+    height: 20px;
+    animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .response-container {
@@ -142,7 +177,7 @@ button:hover {
 
 .response-card{
     width: 95%;
-    height:10%;
+    height:max-content;
     margin: 1%;
     padding: 1%;
     border-radius: 6px;
